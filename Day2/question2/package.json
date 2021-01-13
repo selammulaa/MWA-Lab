@@ -1,0 +1,19 @@
+{
+  "name": "question2",
+  "version": "1.0.0",
+  "description": "day 2 question 2",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "question2",
+    "assignment"
+  ],
+  "author": "Selam Alemseged",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

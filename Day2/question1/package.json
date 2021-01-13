@@ -1,0 +1,19 @@
+{
+  "name": "mean_games",
+  "version": "1.0.0",
+  "description": "This is an application to demonestrate the MEAN stack using my board games hobby",
+  "main": "mean_game.js",
+  "scripts": {
+    "start": "node mean_game.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "MEAN",
+    "boardGames"
+  ],
+  "author": "Selam Alemseged",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
