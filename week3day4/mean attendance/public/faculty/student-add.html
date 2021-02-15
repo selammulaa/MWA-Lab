@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MEAN Attendance App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .secretcode {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #17a3b838;">
+        <a class="navbar-brand" href="#">MEAN Attendace</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/faculty">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/faculty/attendance">Take Attendace</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="/faculty/students">Students</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/faculty/secret-code">Secret QR Code</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <button class="btn btn-outline-default my-2 my-sm-0">Logout</a>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container" style="width: 900px;">
+        <h3 style="padding: 40px 20px 20px 20px">Add Student</h3>
+
+        <div class="row .mx-auto border" style="padding:20px;">
+            <div class="col-3">
+                <img id="profile-img" src="/images/black.jpg" alt="image" width="200" style="padding-right: 20px;">
+            </div>
+            <div class="col-9">
+                <form method="post" action="/login">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="lastName">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="id">Student Id</label>
+                        <input type="number" class="form-control" id="id" placeholder="ID">
+                    </div>
+
+<!-- 
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Password">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="repeatPassword">Repeate Password</label>
+                        <input type="password" class="form-control" id="repeatPassword" placeholder="Repeate Password">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pricure">Picture</label>
+                        <input type="file" class="form-control-file" id="picture">
+                    </div> -->
+
+
+                    <a type="submit" class="btn btn-outline-info" href="/faculty/students">Add Student</a>
+                    <a class="btn btn-outline-secondary" href="/faculty/students">Back</a>
+                </form>
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+</body>
+
+</html>

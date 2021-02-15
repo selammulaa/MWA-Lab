@@ -1,0 +1,43 @@
+<h2>{{vm.title}}</h2>
+
+<div class="row">
+  <div class="col-5">
+    <div class="card" >
+      <img class="card-img-top" src="https://www.cfacdn.com/img/order/menu/Online/Entrees/Jul19_CFASandwich_pdp.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{vm.menu.name}}</h5>
+        <p class="card-text">{{vm.menu.description}}</p>
+        <hr>
+        <h5 class="card-title">Nuitrition</h5>
+        Calories : {{vm.menu.nutrition.calories}} <br>
+        Carbs : {{vm.menu.nutrition.carbs}} <br>
+        Fat : {{vm.menu.nutrition.fat}} <br>
+        Protein : {{vm.menu.nutrition.protein}} <br>
+
+        <br>
+        <h6 class="card-title">Origin: {{vm.menu.origin.country}} </h6>
+        <p class="badge badge-warning " style="font-size: 25px;">{{vm.menu.price | currency}}</p> <br>
+        <a href="#" class="btn btn-primary float-right">Back</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-7">
+    <h2>Drinks</h2>
+    <div class="row">
+
+      <div class="col-12" ng-repeat="drink in vm.menu.drinks" style="margin-bottom: 7px;">
+        <div class="card" >
+          <div class="card-body">
+            <h5 class="card-title">{{drink.name}}</h5>
+            <p class="card-text">{{drink.description}}</p>
+            <hr>
+            <p class="badge badge-success float-right" style="font-size: 18px;">{{drink.price | currency}}</p> <br>
+          </div>
+        </div>
+      </div>
+
+  
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+html{
+    position: relative;
+    min-height: 100%;
+}
+
+body{
+    margin-bottom: 90px;
+}
+
+.padding{
+    padding-top: 30px;
+}
+
+.footer{
+    position: absolute;
+}

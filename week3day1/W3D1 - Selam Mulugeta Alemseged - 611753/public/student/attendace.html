@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MEAN Attendance App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #17a3b838;">
+        <a class="navbar-brand" href="#">MEAN Attendace</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/student">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/student/update">Profile</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="/student/attendace">Attendace</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/student/qr-code">QR Code</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <button class="btn btn-outline-default my-2 my-sm-0" type="submit">Logout</button>
+            </form>
+        </div>
+
+    </nav>
+    <div class="container">
+        <h3 class=".mx-auto" style="margin-top:50px;">Attendace</h3>
+        <div class="row">
+            <div class="col-4">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Select Course</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>MPP</option>
+                            <option>WAP</option>
+                            <option>ALG</option>
+                            <option>WAA</option>
+                            <option>MWA</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Session</th>
+                    <th scope="col">Punched in</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>13/23/2020</td>
+                    <td>Morning</td>
+                    <td>09:56 AM</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>12/23/2020</td>
+                    <td>Afternoon</td>
+                    <td>01:28 AM</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>12/23/2020</td>
+                    <td>Morning</td>
+                    <td>09:45 AM</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>12/23/2020</td>
+                    <td>Afternoon</td>
+                    <td>09:45 AM</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>12/23/2020</td>
+                    <td>Morning</td>
+                    <td>09:45 AM</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>12/23/2020</td>
+                    <td>Afternoon</td>
+                    <td>09:45 AM</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+</body>
+
+</html>

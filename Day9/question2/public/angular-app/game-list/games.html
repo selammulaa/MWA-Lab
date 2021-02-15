@@ -1,0 +1,46 @@
+<h2>{{vm.title}}</h2>
+
+<!-- <div ng-show="deleteSuccess" class="alert alert-success" role="alert">
+    Game is successfully deleted
+</div>
+
+<div ng-show="deleteSuccess == false" class="alert alert-danger" role="alert">
+    Error while deleting game
+</div> -->
+
+<ul>
+    <li ng-repeat="game in vm.games">
+        <a ng-href="#!/game/{{game._id}}">{{game.title}}</a> 
+    </li>
+</ul>
+
+<form name="vm.gameForm" ng-submit="vm.addGame()">
+
+    To add a new game please fill in all the fields below: <br>
+
+
+	Title: <input type="text" name="title" required ng-model="vm.newGameTitle"style="color:black"/><BR/>
+
+	Price: <input type="text" name="price" required ng-model="vm.newGamePrice" style="color:black"/><BR/>
+
+	Year of Publication: <input type="text" name="year" required ng-model="vm.newGameYear" style="color:black"/><BR/>
+
+    Rating: <input type="number" ng-min=1 ng-max=5  name = "rating" required ng-model="vm.newGameRating" style="color:black"/>
+    <span ng-show="vm.gameForm.rating.$dirty && vm.gameForm.rating.$invalid" style="color:red">Rating must be between 1 and 5.</span><BR/>
+
+
+	Minimum Number of Players: <input type="number" ng-min=1 ng-max=10 name="minPlayers" required ng-model="vm.newGameMinPlayers" style="color:black"/>
+
+	<span ng-show="vm.gameForm.minPlayers.$dirty && vm.gameForm.minPlayers.$invalid" style="color:red">Minimum players must be between 1 and 10.</span><BR/>
+ 
+	Maximum Number of Players: <input type="number" ng-min=1 ng-max=10 name="maxPlayers" required ng-model="vm.newGameMaxPlayers" style="color:black"/>
+
+    <span ng-show="vm.gameForm.maxPlayers.$dirty && vm.gameForm.maxPlayers.$invalid" style="color:red">Maxinum players must be between 1 and 10.</span><BR/>
+
+	Minimum Recommended Player Age: <input type="text" name="minAge" required ng-model="vm.newGameMinAge" style="color:black"/><BR/>
+
+	Designer name: <input type="text" name="designer" required ng-model="vm.newGameDesigner" style="color:black"/><BR/>
+	
+	<button type="submit" class="btn-success">Add Game</button><BR/>
+
+</form>

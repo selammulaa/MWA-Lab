@@ -1,0 +1,37 @@
+<h1>{{vm.headerTitle}}</h1>
+
+<ul>
+    <li ng-repeat="job in vm.jobs" style="margin-bottom: 10px;">
+        <a ng-href="#!/job/{{job._id}}">{{job.title}}</a> 
+            <!-- <div> -->
+                - {{job.description}} <button ng-click="vm.initEdit(job)">Edit</button>
+            <!-- </div>   -->
+    </li>
+</ul>
+
+<h2>Add new Job Opening</h2>
+<form name="vm.jobForm" ng-submit="vm.addJob()">
+    ID: <input type="text" name="id"  ng-model="vm.id" hidden>
+    Title: <input type="text" name="title" ng-model="vm.title" required> <br>
+    Salary: <input type="number" name="salary" ng-model="vm.salary" required> <br>
+    Experience: <input type="number" name="experience" ng-model="vm.experience" required> <br>
+    Post Date: <input type="date" name="postDate" ng-model="vm.postDate"> <br>
+    Description: <textarea name="description"  rows="5" ng-model="vm.description"></textarea> <br>
+    <br>
+    <span style="font-weight: bold;"> Location</span>
+    <div style="padding-left: 10px;">
+        Country: <input type="text" name="country" ng-model="vm.country"> <br>
+        State: <input type="text" name="state" ng-model="vm.state"> <br>
+        City: <input type="text" name="city" ng-model="vm.city"> <br>
+
+
+    </div>
+
+    <button type="submit">Save</button>
+</form>
+
+<style>
+    input {
+        margin: 10px;
+    }
+</style>

@@ -1,0 +1,43 @@
+<nav ng-controller="LoginController as vm" class="navbar navbar-expand-lg navbar-fixed-top navbar-light bg-light" ng-
+    init="vm.init()" >
+
+
+    <a class="navbar-brand" href="#!/">Mean Menus</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar" class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+            <li ng-class="vm.isActiveTab('')" class="active nav-item"><a href="#!/" class="nav-link">Home</a> </li>
+            <li ng-class="vm.isActiveTab('menus')" class="nav-item"><a href="#!/menus" class="nav-link">Menus</a></li>
+            <li ng-class="vm.isActiveTab('register')" ng-if="!vm.isLoggedIn()" class="nav-item">
+                <a href="#!/register" class="nav-link">Register</a>
+            </li>
+            <li ng-class="vm.isActiveTab('profile')" ng-if="vm.isLoggedIn()" class="nav-item">
+                <a href="#!/profile" class="nav-link">Profile</a>
+            </li>
+        </ul>
+
+        <div class=" float-right">
+            <form ng-if="!vm.isLoggedIn()" class="form-inline my-2 my-lg-0t" role="login" ng-submit="vm.login()">
+                    <input type="text" class="form-control input-sm" placeholder="Username" ng-model="vm.username"
+                        autocapitalize="none" style="margin-right: 10px;">
+                    <input type="password" class="form-control input-sm" placeholder="Password" ng-model="vm.password"
+                        autocapitalize="none" style="margin-right: 10px;">
+                <button type="submit" class="btn btn-outline-info my-2 my-sm-0 ">Login</button>
+            </form>
+        </div>
+
+
+        <ul ng-if="vm.isLoggedIn()" class="new navbar-nav navbar-right">
+            <li style="margin-right: 20px;">
+                <p class="navbar-text">Welcome {{vm.loggedInUser}}</p>
+            </li>
+            <li><button class="btn btn-outline-info my-2 my-sm-0 " ng-click="vm.logout()">Logout</button>
+            </li>
+        </ul>
+    </div>
+
+</nav>

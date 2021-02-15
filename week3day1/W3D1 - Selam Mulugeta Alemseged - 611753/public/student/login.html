@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MEAN Attendance App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #17a3b838;">
+        <a class="navbar-brand" href="#">MEAN Attendace</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+    </nav>
+    <div class="container " style="width: 500px; margin-top: 40px; padding: 20px">
+        <h3 style="padding: 20px">Login</h3>
+
+
+        <div class=".mx-auto border" style="padding:20px;">
+            <form method="post" action="/login">
+                <div class="form-group">
+                    <label for="username">Student ID</label>
+                    <input type="text" class="form-control" id="username" placeholder="Student ID">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+                <a href="/student/profile" class="float-right text-danger">You still dont have profile? Create one here</a><br>
+                <a href="/student" class="btn btn-outline-info">Login</a>
+            </form>
+        </div>
+
+    </div>
+<!-- 
+    <nav class="navbar fixed-bottom navbar-light " style="background-color: #17a3b838;">
+        <a class="navbar-brand float-right" href="#" >&copy; 2020 All right reserved.</a>
+      </nav> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+
+</html>

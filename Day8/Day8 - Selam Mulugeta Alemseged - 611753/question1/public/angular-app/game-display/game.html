@@ -1,0 +1,19 @@
+<div style="padding: 30px;">
+    <h2 style="padding-bottom: 10px;">
+        Information about game
+  
+    </h2>
+    
+    <h3>{{vm.game.title | uppercase}} 
+        <game-rating stars={{vm.rating}}></game-rating>
+    </h3>
+    
+    
+    <p> 
+        Price: {{vm.game.price | currency}} <br>
+        Minimun Players: {{vm.game.minPlayers}}<br>
+        Maximum Players: {{vm.game.maxPlayers}}<br>
+        Minimun Age: {{vm.game.minAge}}<br>
+        Publisher: {{vm.game.publisher.name}} <br>
+    </p>
+</div>

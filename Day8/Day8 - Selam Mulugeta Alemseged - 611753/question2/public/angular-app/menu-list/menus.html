@@ -1,0 +1,9 @@
+<h2>{{vm.title}}</h2>
+
+<div class="row">
+    <ul class="list-group" style="width: fit-content;">
+        <li class="list-group-item" ng-repeat="menu in vm.menus">
+            <a ng-href="#!/menu/{{menu._id}}">{{menu.name}}</a>
+        </li>
+    </ul>
+</div>
